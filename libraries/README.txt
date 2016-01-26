@@ -1,4 +1,4 @@
-If you wish to use these libraries please copy the folders into your Energia libraries folder. 
+If you wish to use these libraries please copy the "GroveModulesLib" folder into your Energia libraries folder. 
 Windows: My Documents\Energia\libraries
 Mac & Linux: ~/Documents/Energia/Libraries
 
