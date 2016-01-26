@@ -44,13 +44,14 @@ void setup()
   
     /* declare the LED pin as an OUTPUT */
     pinMode(LED, OUTPUT);
+    analogReadResolution(12);
 }
 
 /* the loop() method runs over and over again */
 void loop() 
 {   
     analog_value = analogRead(ROTARY_ANGLE_P);      /* read the value from the sensor */
-    blink_interval = analog_value;                  /* store the rotary analog value */
+    blink_interval = analog_value/10;                  /* store the rotary analog value */
     digitalWrite(LED, HIGH);                        /* turn on LED */
     
     memset(bits, 0, 4);                             /* reset array before we use it */

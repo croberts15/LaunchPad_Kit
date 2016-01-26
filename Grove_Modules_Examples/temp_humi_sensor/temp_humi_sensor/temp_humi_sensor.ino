@@ -6,8 +6,7 @@
  
  The circuit:
  * 4-Digit Display attached to Pin 38 and 39 (J14 plug on Grove Base BoosterPack)
- * Rotary Angle Sensor attached to Pin 24 (J6 plug on Grove Base BoosterPack)
- * sig pin of the Grove-Temperature-Humidity Sensor to the analog pin A1
+ * signal pin of the Grove-Temperature-Humidity Sensor to Pin 24 (J6 plug on Grove Base BoosterPack)
 
  
  * Note: Put your hands on Temperature & Humidity Sensor, both of the values 
@@ -23,7 +22,7 @@
  http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-Pro-p-838.html 
  
  */
- 
+
 #include "TM1637.h" 
 #include "DHT.h"
 
@@ -57,7 +56,7 @@ void loop()
 {   
     int _temperature = dht.readTemperature();             /* read the temperature value from the sensor */
     int _humidity = dht.readHumidity();                   /* read the humidity value from the sensor */    
-             
+    
     memset(t_bits, 0, 2);                                 /* reset array before we use it */
     memset(h_bits, 0, 2);                                 /* reset array before we use it */
     

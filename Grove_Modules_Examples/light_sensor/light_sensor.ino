@@ -28,6 +28,7 @@
 /* Global Variables */
 TM1637 tm1637(CLK, DIO);                  /* 4-Digit Display object */
 int analog_value = 0;                     /* variable to store the value coming from Light Sensor */
+
 int8_t bits[4] = {0};                     /* array to store the single digits of the value */
 
 /* the setup() method runs once, when the sketch starts */
@@ -36,6 +37,7 @@ void setup()
   /* Initialize 4-Digit Display */
   tm1637.init();
   tm1637.set(BRIGHT_TYPICAL);
+  analogReadResolution(12);
 }
 
 /* the loop() method runs over and over again */

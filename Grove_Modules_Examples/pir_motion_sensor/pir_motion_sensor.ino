@@ -7,7 +7,7 @@
  use it to detect the motion of people. 
  
  The circuit:
- * Grove PIR Motion Sensor attached to Pin 7 (J12 plug on Grove Base BoosterPack)
+ * Grove PIR Motion Sensor attached to Pin 39 (J14 plug on Grove Base BoosterPack)
  
  * Note: Position the Motion Sensor's jumper on N_Retrig to ensure the light stays 
    on while motion is present
@@ -19,7 +19,7 @@
 */
 
 /* Macro Define */
-#define PIR_MOTION_SENSOR        7            /* sig pin of the PIR sensor */
+#define PIR_MOTION_SENSOR        39            /* sig pin of the PIR sensor */
 #define LED                      RED_LED      /* LED */
 
 /* the setup() method runs once, when the sketch starts */

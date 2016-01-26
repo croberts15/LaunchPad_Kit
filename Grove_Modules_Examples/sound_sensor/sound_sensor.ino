@@ -16,7 +16,7 @@
  
 #define SOUND_SENSOR       24           /* sound sensor pin */          
 #define LED                RED_LED      /* LED pin */
-#define THRESHOLD_VALUE    200          /* The threshold to turn the LED on 200.00*3.3/1024 = 0.65v */
+#define THRESHOLD_VALUE    2000          /* The threshold to turn the LED on 200.00*3.3/1024 = 0.65v */
 
 /* Global Variables */
 int sound_value = 0;       /* variable to store the value coming from sound sensor */
@@ -24,15 +24,16 @@ int sound_value = 0;       /* variable to store the value coming from sound sens
 void setup() 
 {
     /* Initialize LED pin */
+    pinMode(SOUND_SENSOR, INPUT);
     pinMode(LED, OUTPUT);  
     digitalWrite(LED, LOW);
+    analogReadResolution(12);
 }
  
 void loop() 
 {
     /* read the Sound Sensor value */
-    sound_value = analogRead(SOUND_SENSOR); 
-	
+    sound_value = analogRead(SOUND_SENSOR); 	
     /* if the sensor value is higher than threshold, turn on LED */
     if(sound_value > THRESHOLD_VALUE) 
     {
@@ -40,6 +41,7 @@ void loop()
         delay(1000);
     }
     digitalWrite(LED, LOW);
+    delay(100);
 }
 
  
