@@ -12,7 +12,7 @@ written by Adafruit Industries
 #define msp430
 #elif defined(__MSP432P401R__)
 #include <ti/drivers/GPIO.h>
-#define msp432
+#define F_CPUMSP432 
 #else 
 #error Platform not supported
 #endif
